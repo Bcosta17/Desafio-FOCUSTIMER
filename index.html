@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusTimer</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="src/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+      <button id="toggle-mode">
+        <span class="sr-only">Ativar Light Mode</span>
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon"></i>
+      </button>
+
+     <div class="column-left">
+      <section id="timer" class="flex">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls" class="flex">
+        <button class="ph ph-play-circle" data-action="toggleRunning">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+        <button class="ph ph-pause-circle" data-action="toggleRunning"></button>
+          <span class="sr-only">Pausar contador</span>
+        </button>
+        <!-- <button class="ph ph-timer secondary" data-action="set"></button>
+          <span class="sr-only">Ajustar contador</span>
+        </button> -->
+        <button class="ph ph-stop-circle" data-action= "reset"></button>
+          <span class="sr-only">Reiniciar contador</span>
+        </button>
+        <button class="ph ph-plus-circle" data-action= "increaseTimer"></button>
+          <span class="sr-only">Aumentar o tempo</span>
+        </button>
+        <button class="ph ph-minus-circle"  data-action= "decreaseTimer">
+          <span class="sr-only">Diminui o tempo</span>
+        </button>
+      </section>
+     </div>
+     <div class="column-right">
+     <div id="sounds">
+      <button class="sound" data-sound="chuva">
+        <i class="ph ph-cloud-snow"></i>
+      </button>
+      <button class="sound" data-sound="floresta">
+        <i class="ph ph-tree"></i>
+      </button>
+      <button class="sound" data-sound="lareira">
+        <i class="ph ph-fire"></i>
+      </button>
+      <button class="sound" data-sound="cafeteria">
+        <i class="ph ph-storefront"></i>
+      </button>
+     </div>
+     </div>
+    </div>
+</body>
+</html>
